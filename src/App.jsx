@@ -6,7 +6,6 @@ import Menu from './NavBar/pages/menu'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './NavBar/Components/footer'
 function App() {
-
   return (
     <>
     <div className=''>
@@ -21,7 +20,6 @@ function App() {
       </Router>
       <Footer />
     </div>
- 
     </>
   )
 }

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-    <div className='px-[50px]'>
+    <div className=''>
     <Router>
         <NavBar />
         <Routes>

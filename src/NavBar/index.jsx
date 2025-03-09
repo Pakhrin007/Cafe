@@ -4,7 +4,7 @@ const NavBar = () => {
         <div className='flex justify-between items-center w-screen px-[50px] mt-[20px] py-[10px]'>
             <h1 className='text-[20px] font-bold '>
                 <Link to="/">
-                    <h1>Cafe</h1>
+                    <h1>LostSlip</h1>
                 </Link>
             </h1>
             <div className='flex gap-[40px]'>

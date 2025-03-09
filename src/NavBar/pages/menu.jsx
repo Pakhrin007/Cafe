@@ -43,25 +43,26 @@ const Menu = () => {
     };
 
     return (
-        <div className='flex flex-col h-screen'>
-            <div className="flex flex-col items-center justify-center gap-4">
+        <div className='flex flex-col h-full bg-gray-50 mb-[100px]'>
+            <div className="flex flex-col items-center justify-center ">
                 {/* Header with divider lines */}
                 <div className="flex items-center justify-center p-[30px] mb-10">
                     <div className="h-px bg-gray-300 w-52"></div>
-                    <h1 className="text-4xl font-poppins text-gray-800 px-6 uppercase">Menu</h1>
+                    <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">Our Menu</h1>
                     <div className="h-px bg-gray-300 w-52 "></div>
                 </div>
 </div>
 <div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-[80%]">
+                <div className=" flex flex-wrap gap-x-[45px] px-[85px] gap-y-[40px] ">
                     {menuItems.map((item, index) => (
                         <div 
                             key={index} 
-                            className="bg-white shadow-md rounded-lg  cursor-pointer flex flex-col items-center"
+                            className="bg-white shadow-md rounded-lg hover:scale-105 transition-all duration-300 cursor-pointer flex flex-col items-center w-[290px] h-[210px]"
                             onClick={() => {
                                 setIsOpen(true);
                                 setSelectedIndex(index);
                             }}
+                            
                         > 
                             <img src={item.cardImage} alt={item.name} className="w-full h-40 object-cover rounded-md" />
                             <div className="mt-2 font-poppins text-lg font-semibold">{item.name}</div>
@@ -73,7 +74,7 @@ const Menu = () => {
             {/* Modal */}
             {isOpen && (
                 <div 
-                    className="fixed inset-0 flex w-[100%] items-center justify-center bg-black/[20%] opacity-75 z-50"
+                    className="fixed inset-0 flex w-[100%] items-center justify-center bg-black/[70%] opacity-100 z-50"
                     onClick={closeModal} // Close modal when clicking background
                 >
                     <motion.div
@@ -84,14 +85,14 @@ const Menu = () => {
                         onClick={(e) => e.stopPropagation()} // Prevent the modal from closing when clicking inside the modal
                     >
                         <button
-                            className="absolute top-2 right-2 text-gray-500 hover:text-black text-[2rem]"
+                            className="absolute top-2 right-4 text-gray-500 hover:text-black text-[2rem] hover:rotate-90 transition-all duration-300"
                             onClick={closeModal}
                         >
                             &times;
                         </button>
                         {selectedIndex !== null && (
                             <div >
-                                <h2 className="text-lg font-bold">{menuItems[selectedIndex].name}</h2>
+                                <h2 className="text-lg font-bold text-center text-brown-500 underline underline-offset-4">{menuItems[selectedIndex].name}</h2>
                                 <img 
                                     src={menuItems[selectedIndex].modalImage} 
                                     alt={menuItems[selectedIndex].name} 

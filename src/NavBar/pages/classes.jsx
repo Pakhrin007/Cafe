@@ -47,11 +47,11 @@ const Classes = () => {
           <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">Our Classes</h1>
           <div className="h-px bg-gray-300 w-52 "></div>
         </div>
-            <div className="flex flex-wrap gap-x-[40px] px-[50px] gap-y-[40px]">
+            <div className="flex flex-wrap gap-x-[45px] px-[50px] gap-y-[40px]">
                 {classes.map((classItem, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow w-[350px] h-[370px]"
+                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg  w-[290px] h-[390px] hover:scale-105 transition-all duration-300"
                     >
                         {/* Image Section */}
                         <img
@@ -61,9 +61,9 @@ const Classes = () => {
                         />
 
                         {/* Class Details Section */}
-                        <div className="p-6">
+                        <div className="p-6 rounded-[20px]">
                             <h2 className="text-2xl font-bold mb-2">{classItem.title}</h2>
-                            <p className="text-gray-600 mb-4">{truncateText(classItem.description, 10)}</p>
+                            <p className="text-gray-600 mb-4">{truncateText(classItem.description, 7)}</p>
 
                             {/* Time and Price Section */}
                             <div className="flex justify-between items-center">

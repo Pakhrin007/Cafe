@@ -7,7 +7,7 @@ const AboutUs = () => {
         {/* Header with divider lines */}
         <div className="flex items-center justify-center p-[30px]">
           <div className="h-px bg-gray-300 w-52"></div>
-          <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">About</h1>
+          <h1 className="text-[20px] font-body text-gray-800 px-6 uppercase">About Us</h1>
           <div className="h-px bg-gray-300 w-52 "></div>
         </div>
         

@@ -7,7 +7,7 @@ const Home = () => {
       {/* Hero Section with Video Background */}
       <div className="relative h-screen w-[95vw] mx-auto">
         {/* Video background */}
-        <div className="absolute overflow-hidden mt-[30px]">
+        <div className="absolute overflow-hidden mt-[30px] h-[100vh]">
           <video 
             autoPlay 
             muted 
@@ -23,7 +23,7 @@ const Home = () => {
         
         {/* Overlay Text */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-          <h1 className="text-5xl md:text-6xl font-serif text-white mb-4">Coffee Covet</h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-white ">Coffee Covet</h1>
           <p className="text-xl md:text-2xl text-white max-w-2xl">
             Discover the art of authentic Indian coffee, crafted with passion since 2015
           </p>
@@ -31,7 +31,7 @@ const Home = () => {
       </div>
 
       {/* History Section */}
-      <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto mt-[100px]">
+      <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto mt-[130px]">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-serif text-gray-800 mb-6">Our Coffee Journey</h2>
           <div className="h-1 w-24 bg-brown-600 mb-8"></div>

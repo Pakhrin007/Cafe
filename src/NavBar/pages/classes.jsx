@@ -47,11 +47,11 @@ const Classes = () => {
           <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">Our Classes</h1>
           <div className="h-px bg-gray-300 w-52 "></div>
         </div>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-x-[40px] px-[50px] gap-y-[40px]">
                 {classes.map((classItem, index) => (
                     <div
                         key={index}
-                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow w-[330px] h-[370px]"
+                        className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow w-[350px] h-[370px]"
                     >
                         {/* Image Section */}
                         <img

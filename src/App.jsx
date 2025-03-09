@@ -8,7 +8,7 @@ import Footer from './NavBar/Components/footer'
 function App() {
   return (
     <>
-    <div className=''>
+    <div className='overflow-x-hidden'>
     <Router>
         <NavBar />
         <Routes>

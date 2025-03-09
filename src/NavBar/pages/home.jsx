@@ -3,17 +3,16 @@ import video2 from "../../assets/videos/video2.mp4"
 import image from "../../assets/images/coffee.jpeg"
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gray-50 ">
+    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Hero Section with Video Background */}
       <div className="relative h-screen w-[95vw] mx-auto">
         {/* Video background */}
-        <div className="absolute overflow-hidden">
+        <div className="absolute overflow-hidden mt-[30px]">
           <video 
             autoPlay 
-            
             muted 
             loop 
-            className="w-full h-full object-cover"
+            className="w-screen h-full object-cover"
           >
             <source src={video2} type="video/mp4" />
           </video>
@@ -32,7 +31,7 @@ const Home = () => {
       </div>
 
       {/* History Section */}
-      <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+      <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto mt-[100px]">
         <div className="flex flex-col items-center mb-12">
           <h2 className="text-4xl font-serif text-gray-800 mb-6">Our Coffee Journey</h2>
           <div className="h-1 w-24 bg-brown-600 mb-8"></div>
@@ -79,6 +78,44 @@ const Home = () => {
             </p>
           </div>
           
+          <div className="flex flex-col md:flex-row gap-6 relative">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">
+              <img 
+                src={image} 
+                alt="Whipped Coffee Ice Cream Sundae" 
+                className="rounded-lg shadow-md w-64 h-64 object-cover"
+              />
+              <div className="flex flex-col ">
+            
+                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Whipped Coffee Ice Cream Sundae</h3>
+                <p className="text-xl text-brown-600 mt-1">10$</p>
+                <p className="text-gray-700 mt-2">
+                  Layers of coffee-infused ice cream, chocolate sauce, and whipped cream topped with chocolate shavings.
+                </p>
+              </div>
+              {/* Arrow */}
+             
+            </div>
+            
+            {/* Item 2 */}
+            <div className="flex  flex-row-reverse items-center md:items-start gap-6 relative mt-[200px]">
+              <img 
+                src={image} 
+                alt="Turtle Iced Coffee" 
+                className="rounded-lg shadow-md w-64 h-64 object-cover"
+              />
+              <div className="flex flex-col md:pt-8 md:text-right">
+            
+                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Turtle Iced Coffee</h3>
+                <p className="text-xl text-brown-600 mt-1">11.06$</p>
+                <p className="text-gray-700 mt-2">
+                  A decadent blend of cold brew coffee, caramel, chocolate, and topped with whipped cream and pecans.
+                </p>
+              </div>
+              {/* Arrow */}
+              
+            </div>
+          </div>
           <div className="flex flex-col md:flex-row gap-6 relative">
             {/* Item 1 */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">

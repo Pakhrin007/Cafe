@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50 overflow-x-hidden">
       {/* Hero Section with Video Background */}
-      <div className="relative h-screen w-[95vw] mx-auto">
+      <div className="relative h-[90vh] w-[95vw] mx-auto">
         {/* Video background */}
         <div className="absolute overflow-hidden mt-[30px] h-[100vh]">
           <video 

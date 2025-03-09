@@ -7,6 +7,8 @@ const config = {
       fontFamily: {
         title: "Poppins",
         body: "Manrope",
+        heading: "EB Garamond",
+        
       },
 
     },

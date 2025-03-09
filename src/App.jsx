@@ -5,6 +5,8 @@ import Classes from './NavBar/pages/classes'
 import Menu from './NavBar/pages/menu'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Footer from './NavBar/Components/footer'
+
+import ClassDetails from './NavBar/pages/ClassDetails'
 function App() {
   return (
     <>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/classes" element={<Classes />} />
+          <Route path="/classDetails/:id" element={<ClassDetails/>} />
           <Route path="/menu" element={<Menu />} />
         </Routes>
       </Router>

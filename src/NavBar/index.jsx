@@ -40,7 +40,7 @@ const NavBar = () => {
       {isOpen && (
         <div
           id="menu-overlay"
-          className="fixed inset-0 bg-opacity-40 backdrop-blur-md flex justify-end items-start pt-16 z-40"
+          className="fixed inset-0 flex justify-end items-start pt-16 z-40"
           onClick={closeMenu} // Detect click outside
         >
           <div 
@@ -52,7 +52,7 @@ const NavBar = () => {
               className="absolute top-3 right-3 text-2xl"
               onClick={() => setIsOpen(false)}
             >
-              <FiX />
+              {/* <FiX /> */}
             </button>
 
             {/* Menu Items */}

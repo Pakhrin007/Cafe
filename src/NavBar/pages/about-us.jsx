@@ -60,7 +60,7 @@ const AboutUs = () => {
           </div>
           
           {/* Text content */}
-          <div className="w-full md:mt-[50px]">
+          <div className="w-full md:mt-[50px]"> 
             {/* Description text */}
             <p className="font-poppins text-justify text-[14px] md:text-[18px] text-black mb-[20px]">
               Hailing all the way from Mumbai, India, Coffee Covet first started out in June 2015 as a simple coffee stand where one can hear all about the milk produced in Mumbai and its relation to the coffee scene in India. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid neque voluptates minima alias? Ut sunt eum dicta voluptas minima, eligendi inventore neque nulla, ipsa, accusantium maiores. Nisi ex magnam doloremque!

@@ -9,12 +9,12 @@ const AboutUs = () => {
         {/* Header with divider lines */}
         <div className="flex items-center justify-center mt-[20px]">
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
-          <h1 className="text-[20px] font-body text-gray-800 px-3 md:px-6 uppercase">About Us</h1>
+          <h1 className="text-[18px] font-body text-gray-800 px-3 md:px-6 uppercase">About Us</h1>
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
         </div>
         
         {/* Content section - Responsive: column on small screens, row on medium+ */}
-        <div className="flex flex-col md:flex-row md:gap-x-8 gap-y-6 md:gap-y-0">
+        <div className="flex flex-col md:flex-row md:gap-x-8 gap-y-6 md:gap-y-0 p-[30px]">
           {/* Image */}
           <div className="w-full flex justify-center md:justify-start">
             <div className="rounded-[20px] overflow-hidden">
@@ -42,12 +42,12 @@ const AboutUs = () => {
         {/* Our mission section */}
         <div className="flex items-center justify-center">
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
-          <h1 className="text-[20px] font-body text-gray-800 px-3 md:px-6 uppercase font-title">Our Mission</h1>
+          <h1 className="text-[18px] font-body text-gray-800 px-3 md:px-6 uppercase font-title">Our Mission</h1>
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
         </div>
 
         {/* Mission content - Responsive: column on small screens, row-reverse on medium+ */}
-        <div className="flex flex-col md:flex-row-reverse md:gap-x-10 gap-y-6 md:gap-y-0">
+        <div className="flex flex-col md:flex-row-reverse md:gap-x-10 gap-y-6 md:gap-y-0 p-[30px]">
           {/* Image */}
           <div className="w-full flex justify-center md:justify-start">
             <div className="rounded-[20px] overflow-hidden">
@@ -73,13 +73,13 @@ const AboutUs = () => {
         </div>
 
         {/* Locations section */}
-        <div className="flex items-center justify-center p-[30px]">
+        <div className="flex items-center justify-center mb-5">
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
-          <h1 className="text-[20px] font-body text-gray-800 px-3 md:px-6 uppercase font-title">Our Locations</h1>
+          <h1 className="text-[18px] text-gray-800 px-3 md:px-6 uppercase ">Our Locations</h1>
           <div className="h-px bg-gray-300 w-20 md:w-52"></div>
         </div>
         
-        <div className="flex justify-center mb-[30px]">
+        <div className="flex justify-center mb-[30px] ">
           <a href="https://maps.app.goo.gl/kWaEPGNyD8onWf416">
             <img src={location} alt="location" className="w-full max-w-[1500px] h-auto object-contain" />
           </a>

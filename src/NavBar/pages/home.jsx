@@ -7,7 +7,7 @@ const Home = () => {
       {/* Hero Section with Video Background */}
       <div className="relative h-[90vh] w-[95vw] mx-auto">
         {/* Video background */}
-        <div className="absolute overflow-hidden mt-[30px] h-[100vh]">
+        <div className="absolute mt-[30px] h-[100vh] font-[Poppins]">
           <video 
             autoPlay 
             muted 
@@ -32,11 +32,10 @@ const Home = () => {
 
       {/* History Section */}
       <div className="py-16 px-4 md:px-8 max-w-7xl mx-auto mt-[130px]">
-        <div className="flex flex-col items-center mb-12">
+        <div className="flex flex-col items-center ">
           <h2 className="text-4xl font-serif text-gray-800 mb-6">Our Coffee Journey</h2>
           <div className="h-1 w-24 bg-brown-600 mb-8"></div>
           <p className="text-center text-gray-700 max-w-3xl">
-            From the vibrant streets of Mumbai to your cup, discover how our passion for quality Indian coffee has evolved since 2015.
           </p>
         </div>
         
@@ -64,21 +63,36 @@ const Home = () => {
       </div>
 
       {/* New Arrivals Section */}
-      <div className="py-16 px-4 md:px-8 bg-gray-100">
+      <div className="  px-[8px] md:px-8 bg-gray-100 mb-[10px]   ">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col items-center mb-12">
-          <div className="flex items-center justify-center p-[30px] mb-[30px]">
-          <div className="h-px bg-gray-300 w-52"></div>
-          <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">New Arrivals</h1>
-          <div className="h-px bg-gray-300 w-52 "></div>
+          <div className="flex flex-col items-center ">
+          <div className="flex items-center justify-center p-[30px]">
+          <div className="h-px bg-gray-300 md:w-52 w-[60px] "></div>
+          <h1 className="text-[16px] font-poppins text-gray-800 px-6 uppercase md:text-[20px]">New Arrivals</h1>
+          <div className="h-px bg-gray-300 md:w-52 w-[60px] "></div>
         </div>
-            <div className="h-1 w-24 bg-brown-600 mb-8"></div>
-            <p className="text-center text-gray-700 max-w-3xl">
-              Discover our latest creations, crafted with love and innovation to delight your taste buds.
-            </p>
+        
           </div>
           
           <div className="flex flex-col md:flex-row gap-6 relative">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">
+              <img 
+                src={image} 
+                alt="Whipped Coffee Ice Cream Sundae" 
+                className="rounded-lg shadow-md w-64 h-64 object-cover"
+              />
+              <div className="flex flex-col ">          
+                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Whipped Coffee Ice Cream Sundae</h3>
+                <p className="text-xl text-brown-600 mt-1">10$</p>
+                <p className="text-gray-700 mt-2">
+                  Layers of coffee-infused ice cream, chocolate sauce, and whipped cream topped with chocolate shavings. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate maiores libero tempora consequuntur, obcaecati quidem eius atque. Eveniet, aut omnis adipisci eius animi illo accusamus ipsa fuga aliquam corrupti.
+                </p>
+              </div>
+              {/* Arrow */}
+             
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row-reverse gap-6 relative items-end mt-[30px]">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">
               <img 
                 src={image} 
@@ -90,73 +104,13 @@ const Home = () => {
                 <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Whipped Coffee Ice Cream Sundae</h3>
                 <p className="text-xl text-brown-600 mt-1">10$</p>
                 <p className="text-gray-700 mt-2">
-                  Layers of coffee-infused ice cream, chocolate sauce, and whipped cream topped with chocolate shavings.
+                  Layers of coffee-infused ice cream, chocolate sauce, and whipped cream topped with chocolate shavings. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur cupiditate maiores libero tempora consequuntur, obcaecati quidem eius atque. Eveniet, aut omnis adipisci eius animi illo accusamus ipsa fuga aliquam corrupti.
                 </p>
+                
               </div>
-              {/* Arrow */}
-             
-            </div>
-            
-            {/* Item 2 */}
-            <div className="flex  flex-row-reverse items-center md:items-start gap-6 relative mt-[200px]">
-              <img 
-                src={image} 
-                alt="Turtle Iced Coffee" 
-                className="rounded-lg shadow-md w-64 h-64 object-cover"
-              />
-              <div className="flex flex-col md:pt-8 md:text-right">
-            
-                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Turtle Iced Coffee</h3>
-                <p className="text-xl text-brown-600 mt-1">11.06$</p>
-                <p className="text-gray-700 mt-2">
-                  A decadent blend of cold brew coffee, caramel, chocolate, and topped with whipped cream and pecans.
-                </p>
               </div>
-              {/* Arrow */}
-              
-            </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-6 relative">
-            {/* Item 1 */}
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 relative">
-              <img 
-                src={image} 
-                alt="Whipped Coffee Ice Cream Sundae" 
-                className="rounded-lg shadow-md w-64 h-64 object-cover"
-              />
-              <div className="flex flex-col ">
-            
-                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Whipped Coffee Ice Cream Sundae</h3>
-                <p className="text-xl text-brown-600 mt-1">10$</p>
-                <p className="text-gray-700 mt-2">
-                  Layers of coffee-infused ice cream, chocolate sauce, and whipped cream topped with chocolate shavings.
-                </p>
-              </div>
-              {/* Arrow */}
-             
-            </div>
-            
-            {/* Item 2 */}
-            <div className="flex  flex-row-reverse items-center md:items-start gap-6 relative mt-[200px]">
-              <img 
-                src={image} 
-                alt="Turtle Iced Coffee" 
-                className="rounded-lg shadow-md w-64 h-64 object-cover"
-              />
-              <div className="flex flex-col md:pt-8 md:text-right">
-            
-                <h3 className="text-2xl font-serif text-brown-800 mt-4 md:mt-0">Turtle Iced Coffee</h3>
-                <p className="text-xl text-brown-600 mt-1">11.06$</p>
-                <p className="text-gray-700 mt-2">
-                  A decadent blend of cold brew coffee, caramel, chocolate, and topped with whipped cream and pecans.
-                </p>
-              </div>
-              {/* Arrow */}
-              
-            </div>
-          </div>
-          
-       
+
         </div>
       </div>
 

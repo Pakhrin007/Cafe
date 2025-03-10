@@ -5,6 +5,7 @@ import hookah from "../../assets/images/hookah.jpg";
 import nonEspresso from "../../assets/images/nonEspresso.jpg";
 import ramen from "../../assets/images/ramen.jpg";
 import titBits from "../../assets/images/titBits.jpg";
+
 const menuItems = [
     { 
         name: "Cafe Mocha", 
@@ -33,7 +34,6 @@ const menuItems = [
     }
 ];
 
-
 const Menu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState(null);
@@ -43,17 +43,19 @@ const Menu = () => {
     };
 
     return (
-        <div className='flex flex-col h-full bg-gray-50 mb-[100px]'>
-            <div className="flex flex-col items-center justify-center ">
+        <div className='flex flex-col h-full bg-gray-50 mb-[50px] md:mb-[100px]'>
+            <div className="flex flex-col items-center justify-center">
                 {/* Header with divider lines */}
-                <div className="flex items-center justify-center p-[30px] mb-10">
-                    <div className="h-px bg-gray-300 w-52"></div>
-                    <h1 className="text-[20px] font-poppins text-gray-800 px-6 uppercase">Our Menu</h1>
-                    <div className="h-px bg-gray-300 w-52 "></div>
+                <div className="flex items-center justify-center p-4 md:p-[30px] mb-6 md:mb-10">
+                    <div className="h-px bg-gray-300 w-20 md:w-52"></div>
+                    <h1 className="text-[18px] md:text-[20px] font-poppins text-gray-800 px-3 md:px-6 uppercase">Our Menu</h1>
+                    <div className="h-px bg-gray-300 w-20 md:w-52"></div>
                 </div>
-</div>
-<div>
-                <div className=" flex flex-wrap gap-x-[45px] px-[85px] gap-y-[40px] ">
+            </div>
+            
+            <div>
+                {/* Flexbox layout for menu items with responsive adjustments */}
+                <div className="flex flex-wrap justify-center sm:justify-start gap-6 md:gap-x-[45px] md:gap-y-[40px] px-4 sm:px-8 md:px-[85px]">
                     {menuItems.map((item, index) => (
                         <div 
                             key={index} 
@@ -62,7 +64,6 @@ const Menu = () => {
                                 setIsOpen(true);
                                 setSelectedIndex(index);
                             }}
-                            
                         > 
                             <img src={item.cardImage} alt={item.name} className="w-full h-40 object-cover rounded-md" />
                             <div className="mt-2 font-poppins text-lg font-semibold">{item.name}</div>
@@ -74,14 +75,14 @@ const Menu = () => {
             {/* Modal */}
             {isOpen && (
                 <div 
-                    className="fixed inset-0 flex w-[100%] items-center justify-center bg-black/[70%] opacity-100 z-50"
+                    className="fixed inset-0 flex w-full items-center justify-center bg-black/70 opacity-100 z-50 p-4"
                     onClick={closeModal} // Close modal when clicking background
                 >
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
-                        className="bg-white p-6 rounded-2xl shadow-xl w-[500px] relative"
+                        className="bg-white p-4 md:p-6 rounded-2xl shadow-xl w-full max-w-[500px] relative"
                         onClick={(e) => e.stopPropagation()} // Prevent the modal from closing when clicking inside the modal
                     >
                         <button
@@ -91,12 +92,12 @@ const Menu = () => {
                             &times;
                         </button>
                         {selectedIndex !== null && (
-                            <div >
+                            <div>
                                 <h2 className="text-lg font-bold text-center text-brown-500 underline underline-offset-4">{menuItems[selectedIndex].name}</h2>
                                 <img 
                                     src={menuItems[selectedIndex].modalImage} 
                                     alt={menuItems[selectedIndex].name} 
-                                    className="mt-2 rounded-lg"
+                                    className="mt-2 rounded-lg w-full"
                                 />
                             </div>
                         )}
@@ -107,4 +108,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Menu;
